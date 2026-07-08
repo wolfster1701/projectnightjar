@@ -1,2 +1,108 @@
-<h1>Project Nightjar</h1>
-<p>Coming Soon...</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Project Nightjar</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#000;
+    color:#fff;
+    font-family:Arial, Helvetica, sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    overflow:hidden;
+    position:relative;
+}
+
+/* Background vignette */
+body::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+        radial-gradient(circle at center,
+        rgba(255,255,255,0.03) 0%,
+        rgba(0,0,0,0.95) 75%);
+}
+
+/* Tiny stars */
+body::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background-image:
+        radial-gradient(white 1px, transparent 1px);
+    background-size:120px 120px;
+    opacity:.15;
+}
+
+.container{
+    text-align:center;
+    position:relative;
+    z-index:2;
+}
+
+h1{
+    font-family:'Cinzel', serif;
+    font-size:4rem;
+    font-weight:600;
+    letter-spacing:12px;
+    text-transform:uppercase;
+    margin-bottom:20px;
+    text-shadow:
+        0 0 12px rgba(255,255,255,.15),
+        0 0 30px rgba(255,255,255,.05);
+    animation:fadeIn 2s ease;
+}
+
+.line{
+    width:120px;
+    height:1px;
+    background:#666;
+    margin:25px auto;
+    opacity:.6;
+}
+
+p{
+    font-size:.9rem;
+    letter-spacing:5px;
+    text-transform:uppercase;
+    color:#999;
+    animation:fadeIn 3s ease;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(10px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+    <h1>Project Nightjar</h1>
+    <div class="line"></div>
+    <p>Coming Soon</p>
+</div>
+
+</body>
+</html>
